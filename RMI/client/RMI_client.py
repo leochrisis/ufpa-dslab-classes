@@ -4,9 +4,13 @@ import sys
 Pyro4.config.DETAILED_TRACEBACK=True;
 sys.excepthook = Pyro4.util.excepthook
 
+# Setting a function to read files
+def read_file(file_name):
+	file = open(file_name)
+	return file.read()
+
 # Importing the file that contains the graph
-file = open('input.in')
-string = file.read()
+string = read_file('input.in')
 
 # get a Pyro proxy to the SimpleGraph object
 graph = Pyro4.Proxy("PYRONAME:proxy.graph")
