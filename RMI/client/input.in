@@ -1,0 +1,7 @@
+direcionado = false
+
+vertices
+	Ananindeua, Belém, Marituba;
+	
+arestas
+	Ananindeua: Belém, Marituba;
